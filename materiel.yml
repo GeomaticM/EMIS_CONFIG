@@ -4,11 +4,10 @@ spring:
     name: emis
     platform: mysql
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://emis_db:3306/emis
+    url: jdbc:mysql://emis_db:3306/emis?useUnicode=true&characterEncoding=utf8
     username: emisdml
     password: emisdml123
     driverClassName: com.mysql.jdbc.Driver
-    schema: import.sql
     # 下面为连接池的补充设置
     # 初始化大小，最小，最大
     initialSize: 1
@@ -33,6 +32,7 @@ spring:
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=1000
     # 合并多个DruidDataSource的监控数据
     useGlobalDataSourceStat: true
+
 logging:
   level:
     root: INFO
@@ -61,8 +61,8 @@ mybatis:
     defaultFetchSize: 100
     #嵌套的SQL中不允许使用RowBouds
     safeRowBoundsEnabled: false
-    #禁止将数据库的下划线列映射到java的驼峰命名属性
-    mapUnderscoreToCamelCase: false
+    #将数据库的下划线列映射到java的驼峰命名属性
+    mapUnderscoreToCamelCase: true
     #一次seesion中的执行内容会被缓存
     localCacheScope: SESSION
     #当参数中没有指定JDBC类型时，指定下面的值作为数据库NULL值的JDBC类型
