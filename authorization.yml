@@ -36,8 +36,8 @@ spring:
     #mq配置信息
     host: mq
     port: 5672
-    username: emis
-    password: emis123
+    username: guest
+    password: guest
 
 logging:
   level:
