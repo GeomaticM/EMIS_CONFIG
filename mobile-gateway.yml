@@ -1,0 +1,6 @@
+spring:
+  rabbitmq:
+    host: mq
+    port: 5672
+    username: emis
+    password: emis123

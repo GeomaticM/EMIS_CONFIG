@@ -69,3 +69,10 @@ mybatis:
     jdbcTypeForNull: OTHER
     #指定哪些方法触发数据库的延迟加载
     lazyLoadTriggerMethods: equals,clone,hashCode,toString
+
+spring:
+  rabbitmq:
+    host: mq
+    port: 5672
+    username: emis
+    password: emis123
