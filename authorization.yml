@@ -32,6 +32,12 @@ spring:
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=1000
     # 合并多个DruidDataSource的监控数据
     useGlobalDataSourceStat: true
+  rabbitmq:
+    #mq配置信息
+    host: mq
+    port: 5672
+    username: emis
+    password: emis123
 
 logging:
   level:
@@ -69,10 +75,4 @@ mybatis:
     jdbcTypeForNull: OTHER
     #指定哪些方法触发数据库的延迟加载
     lazyLoadTriggerMethods: equals,clone,hashCode,toString
-
-spring:
-  rabbitmq:
-    host: mq
-    port: 5672
-    username: emis
-    password: emis123
+  
