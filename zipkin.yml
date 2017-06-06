@@ -4,3 +4,13 @@ spring:
     port: 5672
     username: guest
     password: guest
+  datasource:
+    schema: classpath:/mysql.sql
+    url: jdbc:mysql://emis_db:3306/emis?useUnicode=true&characterEncoding=utf8
+    username: emisdml
+    password: emisdml123
+    continueOnError: true
+    initialize: true
+zipkin:
+  storage:
+    type: mysql
