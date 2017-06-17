@@ -4,7 +4,7 @@ spring:
     name: emis
     platform: mysql
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://emis_db:3306/emis?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://emis-db:3306/emis?useUnicode=true&characterEncoding=utf8
     username: emisdml
     password: emisdml123
     driverClassName: com.mysql.jdbc.Driver
@@ -34,7 +34,7 @@ spring:
     useGlobalDataSourceStat: true
   rabbitmq:
     #mq配置信息
-    host: mq
+    host: rabbitmq
     port: 5672
     username: guest
     password: guest
