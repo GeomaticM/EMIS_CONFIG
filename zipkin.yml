@@ -10,6 +10,7 @@ spring:
     username: emisddl
     password: emisddl123
     initialize: true
+    continueOnError: true
 zipkin:
   storage:
     type: mysql
