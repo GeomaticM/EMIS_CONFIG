@@ -1,0 +1,23 @@
+zuul:
+  #配置ribbom在启动时初始化
+  ribbon:
+    eager-load:
+      enabled: true
+  #关闭zuul的默认路由策略
+  ignoredServices: "*"
+  routes:
+    mobile-gateway:
+      path: /mobile/**
+      serviceId: mobile-gateway
+    discovery:
+      path: /discovery/**
+      url: http://discovery:8761/
+    zipkin:
+      path: /zipkin/**
+      url: http://zipkin:9411/
+    elk:
+      path: /elk/**
+      url: http://elk/
+    rabbitmq:
+      path: /rabbitmq/**
+      url: http://rabbitmq:15672/
