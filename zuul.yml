@@ -1,4 +1,5 @@
 zuul:
+  add-host-header: true
   #配置ribbom在启动时初始化
   ribbon:
     eager-load:
