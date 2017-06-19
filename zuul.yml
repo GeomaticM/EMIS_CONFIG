@@ -13,6 +13,7 @@ zuul:
     discovery:
       path: /discovery/**
       url: http://discovery:8761/
+      stripPrefix: false
     zipkin:
       path: /zipkin/**
       url: http://zipkin:9411/
