@@ -21,6 +21,7 @@ zuul:
     elk:
       path: /elk/**
       url: http://elk/
+      stripPrefix: false
     rabbitmq:
       path: /rabbitmq/**
       url: http://rabbitmq:15672/
