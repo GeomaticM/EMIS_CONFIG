@@ -20,7 +20,7 @@ zuul:
       stripPrefix: false
     elk:
       path: /elk/**
-      url: http://elk/
+      url: http://elk:80/
       stripPrefix: false
     rabbitmq:
       path: /rabbitmq/**
