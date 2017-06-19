@@ -19,9 +19,8 @@ zuul:
       url: http://zipkin:9411/
       stripPrefix: false
     elk:
-      path: /elk/**
-      url: http://elk:80/
-      stripPrefix: false
+      path: /
+      url: http://elk/
     rabbitmq:
       path: /rabbitmq/**
       url: http://rabbitmq:15672/
