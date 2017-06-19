@@ -14,10 +14,6 @@ zuul:
       path: /discovery/**
       url: http://discovery:8761/
       stripPrefix: false
-    zipkin:
-      path: /zipkin/**
-      url: http://zipkin:9411/
-      stripPrefix: false
     rabbitmq:
       path: /rabbitmq/**
       url: http://rabbitmq:15672/
