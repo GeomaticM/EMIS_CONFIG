@@ -32,6 +32,11 @@ spring:
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=1000
     # 合并多个DruidDataSource的监控数据
     useGlobalDataSourceStat: true
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: create-drop
   rabbitmq:
     #mq配置信息
     host: rabbitmq
@@ -45,36 +50,3 @@ spring:
 logging:
   level:
     root: INFO
-
-mybatis:
-  configuration:
-    #全局激活mybatis缓存
-    cacheEnabled: true
-    #激活延迟加载
-    lazyLoadingEnabled: true
-    #允许返回多结果集
-    multipleResultSetsEnabled: true
-    #允许使用列的标号
-    useColumnLabel: true
-    #不允许使用JDBC的生成主键机制
-    useGeneratedKeys: false
-    #允许自动映射不嵌套的结果集到field
-    autoMappingBehavior: PARTIAL
-    #碰到未知的列时输出警告信息
-    autoMappingUnknownColumnBehavior: WARNING
-    #使用支持PS的executor
-    defaultExecutorType: REUSE
-    #等待数据库返回的过期时间
-    defaultStatementTimeout: 25
-    #数据库一个结果集返回的大小
-    defaultFetchSize: 100
-    #嵌套的SQL中不允许使用RowBouds
-    safeRowBoundsEnabled: false
-    #将数据库的下划线列映射到java的驼峰命名属性
-    mapUnderscoreToCamelCase: true
-    #一次seesion中的执行内容会被缓存
-    localCacheScope: SESSION
-    #当参数中没有指定JDBC类型时，指定下面的值作为数据库NULL值的JDBC类型
-    jdbcTypeForNull: OTHER
-    #指定哪些方法触发数据库的延迟加载
-    lazyLoadTriggerMethods: equals,clone,hashCode,toString
