@@ -5,8 +5,8 @@ spring:
     platform: mysql
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://emis-db:3306/emis?useUnicode=true&characterEncoding=utf8
-    username: emisdml
-    password: emisdml123
+    username: emisddl
+    password: emisddl123
     driverClassName: com.mysql.jdbc.Driver
     # 下面为连接池的补充设置
     # 初始化大小，最小，最大
