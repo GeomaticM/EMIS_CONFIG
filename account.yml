@@ -38,6 +38,9 @@ spring:
     generate-ddl: true
     hibernate:
       ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
   rabbitmq:
     #mq配置信息
     host: rabbitmq
